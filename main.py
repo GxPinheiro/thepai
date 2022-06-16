@@ -1,16 +1,13 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import constants
+import commands.phrases as phrases
+from telegram import Update
+from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    application = ApplicationBuilder().token(constants.API_KEY_SERVICE).build()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    application.add_handler(phrases.chegou_handler)
+    application.add_handler(phrases.italiano_handler)
+
+    application.run_polling()
