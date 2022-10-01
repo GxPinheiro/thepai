@@ -123,7 +123,7 @@ celerybeat.pid
 .env
 .venv
 env/
-venv/
+python/venv/
 ENV/
 env.bak/
 venv.bak/
@@ -161,4 +161,6 @@ cython_debug/
 #.idea/
 
 #API Keys
-constants.py
+python/constants.py
+
+.aws-sam
