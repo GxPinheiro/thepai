@@ -1,0 +1,2 @@
+-Install Python3.9
+-Install SAM Cli

@@ -1,0 +1,13 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "ThePai-Telegram-Bot-Serverless"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-qt23ophxwvwi"
+s3_prefix = "ThePai-Telegram-Bot-Serverless"
+region = "sa-east-1"
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []
+confirm_changeset = true
+signing_profiles = "PTBFunction=\"Rhods\""
