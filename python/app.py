@@ -11,9 +11,11 @@ dispatcher = Dispatcher(bot, None, use_context=True)
 def lambda_handler(event, context):
     dispatcher.add_handler(phrases.chegou_handler)
     dispatcher.add_handler(phrases.italiano_handler)
+    dispatcher.add_handler(phrases.top_handler)
     dispatcher.add_handler(phrases.write_handler)
     dispatcher.add_handler(phrases.get_handler)
     dispatcher.add_handler(phrases.insert_handler)
+    # ADICIONAR HANDLER
 
 
     try:
