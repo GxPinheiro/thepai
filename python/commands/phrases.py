@@ -16,6 +16,11 @@ def chegou(update, context):
     context.bot.send_message(chat_id=chat_id, text="O Pai chegou!!!")
 
 
+def top(update, context):
+    chat_id = update.message.chat_id
+    context.bot.send_message(chat_id=chat_id, text="The Pai is very top!!!")
+
+
 def teste(update, context):
     chat_id = update.message.chat_id
     message = update.message.text
@@ -53,6 +58,7 @@ def writetable(update, context):
 
 chegou_handler = CommandHandler('chegou', chegou)
 italiano_handler = CommandHandler('italiano', italiano)
+top_handler = CommandHandler('top', top)
 write_handler = CommandHandler('table', writetable)
 get_handler = CommandHandler('teste1', teste)
 insert_handler = CommandHandler('teste2', getmessage)
